@@ -2,19 +2,13 @@ package structuralAnalysis;
 
 
 import java.io.File;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by neilwalkinshaw on 24/10/2017.
  */
 public class ClassDiagram {
-
-    Set<String> inheritanceRelations;
-    Set<String> associationRelations;
 
     /**
      * Given a package name and a directory returns all classes within that directory
@@ -68,31 +62,10 @@ public class ClassDiagram {
 
 
     public ClassDiagram(String root){
-        inheritanceRelations = new HashSet<String>();
-        associationRelations = new HashSet<String>();
         File dir = new File(root);
         List<Class<?>> classes = processDirectory(dir,"");
-
-        for(Class cls : classes){
-            inheritanceRelations.add("\""+cls.getName()+"\"" + "->" + "\""+cls.getSuperclass().getName()+"\"");
-            for(Field f : cls.getDeclaredFields()){
-                associationRelations.add("\""+cls.getName() +"\""+ "->" +"\""+ f.getType().getName()+"\"");
-            }
-        }
-        visualise();
+        //Insert your lab code here.
     }
 
-    public void visualise(){
-        StringBuffer dotGraph = new StringBuffer();
-        dotGraph.append("digraph{\n");
-        for(String inh : inheritanceRelations){
-            dotGraph.append(inh+" [arrowhead=onormal];\n");
-        }
-        for(String inh : associationRelations){
-            dotGraph.append(inh+" [arrowhead=diamond];\n");
-        }
-        dotGraph.append("}");
-        System.out.println(dotGraph.toString());
-    }
 
 }
