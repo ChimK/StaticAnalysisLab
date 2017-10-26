@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by neilwalkinshaw on 25/10/2017.
  */
-public class ClassDiagramTest {
+public class ClassDiagramSolutionTest {
 
     File dotFile = new File("outputs"+File.separator+"classDiagram.dot");
 
@@ -33,7 +33,7 @@ public class ClassDiagramTest {
 
     @Test
     public void ClassDiagramTest() throws IOException {
-        ClassDiagram testSubject = new ClassDiagram("target/classes", false);
+        ClassDiagramSolution testSubject = new ClassDiagramSolution("target/classes", false);
         testSubject.writeDot(dotFile);
     }
 
