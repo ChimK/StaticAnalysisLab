@@ -10,7 +10,7 @@ DATASTORE="../outputs/diffs.csv"
 REPO_DIR="commons-math"
 
 #HOW MANY COMMITS DO YOU WANT TO ENCOMPASS IN YOUR ANALYSIS?
-NUM_VERSIONS="1000"
+NUM_VERSIONS="100"
 
 # Clone target GIT repository
 git clone --single-branch  $GIT
