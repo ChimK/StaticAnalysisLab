@@ -48,6 +48,11 @@ for j in $(seq 1 $num); do
 
     #Obtain the total LOC in the source directory.
     #(This is where you can include whatever code you want to execute on the repository.)
+
+    #If you want to carry out some form of static / dynamic analysis that requires acces to
+    #the bytecode, you will probably need to run `mvn clean package` at this point...
+
+    #In this example, we only use the raw source code, so no build is required.S
     LOC=$(find src -name '*.java' | xargs wc -l | awk {'print $1'} | tail -n1)
 
     #Pipe the various details that you have collected into the CSV file.
