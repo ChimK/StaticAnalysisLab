@@ -4,7 +4,7 @@
 GIT="https://github.com/apache/commons-math.git"
 
 #INSERT YOUR TARGET CSV FILE BELOW
-DATASTORE="../outputs/diffs.csv"
+DATASTORE="../log.csv"
 
 #INSERT THE ROOT DIRECTORY OF THE REPO YOU ARE ANALYSING BELOW
 REPO_DIR="commons-math"
