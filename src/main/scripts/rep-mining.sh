@@ -38,7 +38,7 @@ for j in $(seq 1 $num); do
     git checkout -f $i
 
     #Obtain the date that version i was committed (via git show)
-	  DATE=$(git show -s --format='%ct' $i)
+	DATE=$(git show -s --format='%ct' $i)
 
     #Obtain the commit message for the current version (also via git show)
     MESSAGE=$(git show -s --format='%B' $i | tr -d '[:punct:]\r\n')
