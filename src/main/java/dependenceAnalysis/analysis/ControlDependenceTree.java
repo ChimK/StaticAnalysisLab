@@ -1,4 +1,4 @@
-package dependenceAnalysis.util.dependenceAnalysis.analysis;
+package dependenceAnalysis.analysis;
 
 import dependenceAnalysis.util.cfg.Graph;
 import dependenceAnalysis.util.cfg.Node;

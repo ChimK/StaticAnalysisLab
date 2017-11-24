@@ -23,7 +23,7 @@ public class Node{
 	}
 	
 	public Node(String id) {
-		this.id = id;
+		this.id = "\""+id+"\"";
 	}
 	
 	public AbstractInsnNode getInstruction(){

@@ -1,4 +1,4 @@
-package dependenceAnalysis.util.dependenceAnalysis.analysis;
+package dependenceAnalysis.analysis;
 
 import br.usp.each.saeg.asm.defuse.Variable;
 import dependenceAnalysis.util.cfg.Graph;

@@ -1,4 +1,4 @@
-package dependenceAnalysis.util.dependenceAnalysis.analysis;
+package dependenceAnalysis.analysis;
 
 import br.usp.each.saeg.asm.defuse.DefUseAnalyzer;
 import br.usp.each.saeg.asm.defuse.DefUseFrame;

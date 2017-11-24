@@ -32,7 +32,7 @@ public class CFGExtractor {
 		g.addNode(entry);
 		g.addNode(exit);
 		for(Node n: g.getNodes()){
-			if(n.toString().equals("Exit") || n.toString().equals("Entry"))
+			if(n.toString().equals("\"Exit\"") || n.toString().equals("\"Entry\""))
 				continue;
 			if(g.getSuccessors(n).isEmpty())
 				g.addEdge(n, exit);
@@ -74,7 +74,7 @@ public class CFGExtractor {
 		return g;
 	}
 	
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws IOException {
 		ClassNode cn = new ClassNode(Opcodes.ASM4);
         InputStream in=CFGExtractor.class.getResourceAsStream("/java/awt/geom/Area.class");
         ClassReader classReader=new ClassReader(in);
